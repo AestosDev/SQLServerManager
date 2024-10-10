@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brix2\\Documents\\Data\\Developement\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj": {}
+    "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brix2\\Documents\\Data\\Developement\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj": {
+    "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brix2\\Documents\\Data\\Developement\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
+        "projectUniqueName": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
         "projectName": "SQLServerManager",
-        "projectPath": "C:\\Users\\brix2\\Documents\\Data\\Developement\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
+        "projectPath": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
         "packagesPath": "C:\\Users\\brix2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brix2\\Documents\\Data\\Developement\\SQLServerManager\\SQLServerManager\\obj\\",
+        "outputPath": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brix2\\AppData\\Roaming\\NuGet\\NuGet.Config",

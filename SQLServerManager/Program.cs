@@ -7,43 +7,30 @@ namespace SQLServerManager
     {
         static void Main(string[] args)
         {
-            string serviceName = "MSSQLSERVER";
+            string[] serviceNames = { "MSSQLSERVER", "SQLSERVERAGENT", "SQLBrowser" };
 
-            ServiceController sqlService = new ServiceController(serviceName);
+            Console.WriteLine("Would you like to start or stop all services? (start/stop): ");
+            string action = Console.ReadLine()?.ToLower();
 
-            try
+            foreach (var serviceName in serviceNames)
             {
-                if (sqlService.Status == ServiceControllerStatus.Running)
+                ServiceController service = new ServiceController(serviceName);
+
+                if (action == "start")
                 {
-                    Console.WriteLine("SQL Server is already running. Would you like to stop it? (y/n)");
-                    var key = Console.ReadKey().Key;
-                    if (key == ConsoleKey.Y)
-                    {
-                        StopService(sqlService);
-                    }
-                    Console.WriteLine(); // Leerzeile nach der Eingabe
+                    StartService(service);
                 }
-                else if (sqlService.Status == ServiceControllerStatus.Stopped)
+                else if (action == "stop")
                 {
-                    Console.WriteLine("SQL Server is not running. Would you like to start it? (y/n)");
-                    var key = Console.ReadKey().Key;
-                    if (key == ConsoleKey.Y)
-                    {
-                        StartService(sqlService);
-                    }
-                    Console.WriteLine(); // Leerzeile nach der Eingabe
+                    StopService(service);
                 }
                 else
                 {
-                    Console.WriteLine($"Current Status: {sqlService.Status}");
+                    Console.WriteLine("Invalid action. Please type 'start' or 'stop'.");
+                    return; 
                 }
             }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
 
-            // Prevent the program from closing immediately after performing the action
             Console.WriteLine("\nPress Enter to exit...");
             Console.ReadLine();
         }
@@ -52,14 +39,21 @@ namespace SQLServerManager
         {
             try
             {
-                Console.WriteLine("\nTrying to start SQL Server Service...");
-                service.Start();
-                service.WaitForStatus(ServiceControllerStatus.Running);
-                Console.WriteLine("SQL Server Service has been started successfully.");
+                if (service.Status == ServiceControllerStatus.Stopped)
+                {
+                    Console.WriteLine($"\nTrying to start {service.DisplayName}...");
+                    service.Start();
+                    service.WaitForStatus(ServiceControllerStatus.Running);
+                    Console.WriteLine($"{service.DisplayName} has been started successfully.");
+                }
+                else
+                {
+                    Console.WriteLine($"{service.DisplayName} is already running.");
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"There was an error while trying to start the SQL Server Service. Error: {ex.Message}");
+                Console.WriteLine($"Error starting {service.DisplayName}: {ex.Message}");
             }
         }
 
@@ -67,14 +61,25 @@ namespace SQLServerManager
         {
             try
             {
-                Console.WriteLine("\nTrying to stop SQL Server Service...");
-                service.Stop();
-                service.WaitForStatus(ServiceControllerStatus.Stopped);
-                Console.WriteLine("SQL Server Service has been stopped successfully.");
+                if (service.Status == ServiceControllerStatus.Running)
+                {
+                    Console.WriteLine($"\nTrying to stop {service.DisplayName}...");
+                    service.Stop();
+                    service.WaitForStatus(ServiceControllerStatus.Stopped);
+                    Console.WriteLine($"{service.DisplayName} has been stopped successfully.");
+                }
+                else if (service.DisplayName == "SQL Server-Agent (MSSQLSERVER)" && service.Status == ServiceControllerStatus.Stopped)
+                {
+                    Console.WriteLine("SQL Server-Agent is already stopped.");
+                }
+                else
+                {
+                    Console.WriteLine($"{service.DisplayName} is already stopped.");
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"There was an error while trying to stop the SQL Server Service. Error: {ex.Message}");
+                Console.WriteLine($"Error stopping {service.DisplayName}: {ex.Message}");
             }
         }
     }
