@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|solutionrelative:sqlservermanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|c:\\users\\brix2\\documents\\data\\developement\\repo\\sqlservermanager\\sqlservermanager\\sqlservermanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|solutionrelative:sqlservermanager\\sqlservermanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|c:\\users\\brix2\\documents\\data\\developement\\repo\\sqlservermanager\\sqlservermanager\\sqlservermanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|solutionrelative:sqlservermanager\\sqlservermanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|c:\\users\\brix2\\documents\\data\\developement\\repo\\sqlservermanager\\sqlservermanager\\sqlservermanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{41F5B5D2-374A-47D3-9CD5-9ECEC663B677}|SQLServerManager\\SQLServerManager.csproj|solutionrelative:sqlservermanager\\sqlservermanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SQLServerManager.csproj",
               "DocumentMoniker": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
               "RelativeDocumentMoniker": "SQLServerManager\\SQLServerManager.csproj",
@@ -39,15 +39,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SQLServerManager",
               "DocumentMoniker": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
               "RelativeDocumentMoniker": "SQLServerManager\\SQLServerManager.csproj",
               "ToolTip": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\SQLServerManager.csproj",
               "RelativeToolTip": "SQLServerManager\\SQLServerManager.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-10T21:39:25.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T21:39:25.608Z"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "SQLServerManager\\Program.cs",
               "ToolTip": "C:\\Users\\brix2\\Documents\\Data\\Developement\\Repo\\SQLServerManager\\SQLServerManager\\Program.cs",
               "RelativeToolTip": "SQLServerManager\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAwFcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T21:32:01.852Z",
               "EditorCaption": ""
