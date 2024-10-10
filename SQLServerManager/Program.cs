@@ -16,18 +16,22 @@ namespace SQLServerManager
                 if (sqlService.Status == ServiceControllerStatus.Running)
                 {
                     Console.WriteLine("SQL Server is already running. Would you like to stop it? (y/n)");
-                    if (Console.ReadKey().Key == ConsoleKey.Y)
+                    var key = Console.ReadKey().Key;
+                    if (key == ConsoleKey.Y)
                     {
                         StopService(sqlService);
                     }
+                    Console.WriteLine(); // Leerzeile nach der Eingabe
                 }
                 else if (sqlService.Status == ServiceControllerStatus.Stopped)
                 {
                     Console.WriteLine("SQL Server is not running. Would you like to start it? (y/n)");
-                    if (Console.ReadKey().Key == ConsoleKey.Y)
+                    var key = Console.ReadKey().Key;
+                    if (key == ConsoleKey.Y)
                     {
                         StartService(sqlService);
                     }
+                    Console.WriteLine(); // Leerzeile nach der Eingabe
                 }
                 else
                 {
